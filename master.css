@@ -1,0 +1,218 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?p7zre8');
+  src:  url('fonts/icomoon.eot?p7zre8#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?p7zre8') format('truetype'),
+    url('fonts/icomoon.woff?p7zre8') format('woff'),
+    url('fonts/icomoon.svg?p7zre8#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-phone:before {
+  content: "\e942";
+  font-family: 'icomoon';
+}
+.icon-menu:before {
+  content: "\e9bd";
+  font-family: 'icomoon';
+}
+.icon-earth:before {
+  content: "\e9ca";
+  font-family: 'icomoon';
+}
+.icon-star-empty:before {
+  content: "\e9d7";
+  color: yellow;
+  font-size: 15px;
+  margin-right: 5px;
+  font-family: 'icomoon';
+}
+.icon-star-half:before {
+  content: "\e9d8";
+  font-family: 'icomoon';
+}
+.icon-star-full:before {
+  content: "\e9d9";
+  font-family: 'icomoon';
+}
+.icon-heart:before {
+  content: "\e9da";
+  font-family: 'icomoon';
+}
+.icon-cancel-circle:before {
+  content: "\ea0d";
+  font-family: 'icomoon';
+}
+.icon-mail4:before {
+  content: "\ea86";
+  font-family: 'icomoon';
+}
+.icon-facebook2:before {
+  content: "\ea91";
+  font-family: 'icomoon';
+}
+.icon-instagram:before {
+  content: "\ea92";
+  font-family: 'icomoon';
+}
+.icon-whatsapp:before {
+  content: "\ea93";
+  font-family: 'icomoon';
+}
+.icon-youtube:before {
+  content: "\ea9d";
+  font-family: 'icomoon';
+}
+
+body
+{
+  background-image: url("images/background.jpg");
+  background-size: 100%;
+  margin: 0;
+}
+header
+{
+    background: rgba(0,0,0,0.8);
+    padding: 20px 0;
+}
+.contlogo
+{
+  text-align: center;
+  margin: 25px;
+}
+.logo
+{
+  width: 30%;
+  vertical-align: middle;
+}
+.menu
+{
+  display: flex;
+  justify-content: space-around;
+  /* border: 5px solid rgba(157, 99, 201,0.7); */
+  padding: 15px;
+  background: rgba(255,255,255,0.2);
+}
+.menu ul
+{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+}
+.menu ul a
+{
+  font-family:"Montserrat";
+  display: inline-block;
+  padding: 10px 0 10px 0;
+  width: 100%;
+  border-left: 2px solid rgba(157, 99, 201,0.7);
+  border-right: 2px solid rgba(157, 99, 201,0.7);
+  background: black;
+  text-decoration: none;
+  color: rgb(83, 204, 195);
+  font-size: 20px;
+  transition: .5s;
+}
+.menu ul a:hover
+{
+  background: rgba(157, 99, 201,0.7);
+  color: yellow;
+}
+.about
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(157, 99, 201,0.4);
+}
+.about h1, .about h3
+{
+  font-family: "Montserrat";
+  color: white;
+}
+.cursos
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cursos:nth-child(1) h1
+{
+  width: 100%;
+  text-align: center;
+  padding: 2vh;
+  background: black;
+}
+.cursos button
+{
+  border: 0;
+  font-family: "Montserrat";
+  font-size: 20px;
+  text-decoration: none;
+  background: linear-gradient(to left, rgb(83, 204, 195),  rgba(157, 99, 201) );
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 0 0 25px 25px;;
+  width: 51%;
+  border-left:  5px solid rgba(157, 99, 201);
+  border-right: 5px solid rgba(157, 99, 201);
+  border-bottom: 5px solid rgba(157, 99, 201);
+}
+.slides
+{
+  width: 50%;
+  overflow: hidden;
+  border-top: 5px solid rgba(157, 99, 201);
+  border-left:  5px solid rgba(157, 99, 201);
+  border-right: 5px solid rgba(157, 99, 201);
+  border-radius: 25px 25px 0 0;
+  background: rgba(157, 99, 201);
+}
+.slides ul
+{
+  display: flex;
+  padding: 0;
+  margin: 0;
+  width: 200%;
+  animation: cambio 20s infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in;
+
+}
+.slides img
+{
+  border-radius: 25px 25px 0 0;
+  width: 50%;
+  height: 50%;
+
+}
+@keyframes cambio
+{
+  0% {margin-left: 0;}
+  20% {margin-left: 0;}
+  25% {margin-left: -100%;}
+  45% {margin-left: -100%;}
+  50% {margin-left: -200%;}
+  70% {margin-left: -200%;}
+  75% {margin-left: -300%;}
+  100% {margin-left:-300%;}
+}
