@@ -27,14 +27,19 @@
 .icon-phone:before {
   content: "\e942";
   font-family: 'icomoon';
+  /* color: green; */
+  margin-right: 5px;
+
 }
 .icon-menu:before {
   content: "\e9bd";
   font-family: 'icomoon';
+  margin-right: 5px;
 }
 .icon-earth:before {
   content: "\e9ca";
   font-family: 'icomoon';
+  margin-right: 5px;
 }
 .icon-star-empty:before {
   content: "\e9d7";
@@ -42,42 +47,62 @@
   font-size: 15px;
   margin-right: 5px;
   font-family: 'icomoon';
+  margin-right: 5px;
 }
 .icon-star-half:before {
   content: "\e9d8";
   font-family: 'icomoon';
+  color: yellow;
+  margin-right: 5px;
 }
 .icon-star-full:before {
   content: "\e9d9";
   font-family: 'icomoon';
+  color: yellow;
+  margin-right: 5px;
 }
 .icon-heart:before {
   content: "\e9da";
+  color: red;
   font-family: 'icomoon';
+  margin-right: 5px;
 }
 .icon-cancel-circle:before {
   content: "\ea0d";
   font-family: 'icomoon';
+  margin-right: 5px;
 }
 .icon-mail4:before {
   content: "\ea86";
   font-family: 'icomoon';
+  /* color: white; */
+  margin-right: 5px;
 }
 .icon-facebook2:before {
   content: "\ea91";
   font-family: 'icomoon';
+  /* color: rgb(59, 89, 152); */
+  margin-right: 5px;
+  /* background: white; */
+  /* border: 1px solid rgb(59, 89, 152); */
+  /* border-radius: 10px; */
+
 }
 .icon-instagram:before {
   content: "\ea92";
   font-family: 'icomoon';
+  margin-right: 5px;
 }
 .icon-whatsapp:before {
   content: "\ea93";
   font-family: 'icomoon';
+  /* color: #25d366; */
+  margin-right: 5px;
 }
 .icon-youtube:before {
   content: "\ea9d";
   font-family: 'icomoon';
+  margin-right: 5px;
 }
 
 body
@@ -152,13 +177,16 @@ header
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: .5s;
 }
 .cursos:nth-child(1) h1
 {
   width: 100%;
   text-align: center;
-  padding: 2vh;
+  padding: 2vh 0;
   background: black;
+  border-top: 5px solid white ;
+  border-bottom: 5px solid white;
 }
 .cursos button
 {
@@ -172,20 +200,30 @@ header
   cursor: pointer;
   padding: 10px;
   border-radius: 0 0 25px 25px;;
-  width: 51%;
-  border-left:  5px solid rgba(157, 99, 201);
-  border-right: 5px solid rgba(157, 99, 201);
-  border-bottom: 5px solid rgba(157, 99, 201);
+  width: 100%;
+  transition: 1s;
+
 }
+/* .cursos button:hover
+{
+  color: yellow;
+  font-size: 45px;
+} */
 .slides
 {
   width: 50%;
   overflow: hidden;
-  border-top: 5px solid rgba(157, 99, 201);
-  border-left:  5px solid rgba(157, 99, 201);
-  border-right: 5px solid rgba(157, 99, 201);
-  border-radius: 25px 25px 0 0;
-  background: rgba(157, 99, 201);
+  /* border: 5px solid gold; */
+  border-radius: 25px;
+  background: gold;
+  box-shadow: 22px 29px 35px -10px;
+  transition: .7s;
+
+}
+.slides:hover
+{
+  transform: scale(1.05);
+  color: yellow;
 }
 .slides ul
 {
@@ -215,4 +253,154 @@ header
   70% {margin-left: -200%;}
   75% {margin-left: -300%;}
   100% {margin-left:-300%;}
+}
+.col2
+{
+  margin-top: 40px;
+  width: 100%;
+  /* background: rgba(255, 215, 0,0.5); */
+  background: rgb(83, 204, 195);
+
+
+}
+.col2 h1
+{
+  text-align: center;
+  background: rgba(0,0,0,0.7);
+}
+.col2 nav
+{
+  display: flex;
+  justify-content: space-around;
+  background: rgba(0,0,0,0.5);
+  padding-top: 25px;
+}
+.col2 nav ol
+{
+  padding: 0 40px 20px 40px;
+  background: linear-gradient(to left, rgba(83, 204, 195, 0.6),  rgba(157, 99, 201, 0.6) );
+  cursor: pointer;
+  border-radius: 25px;
+  border: 5px solid gold;
+  color: black;
+
+  font-family: "Montserrat";
+  margin: 20px;
+  width: 50%;
+  animation: color 3s infinite;
+  box-shadow: 12px 12px 15px 0.5px;
+  /* transition: .1s; */
+}
+.col2 li
+{
+  list-style: none;
+  color: white;
+}
+@keyframes color
+{
+
+    50%{transform: scale(1.02);}
+}
+.col2 h2
+{
+  text-align: center;
+  color: white;
+}
+
+footer
+{
+  background: linear-gradient(to left, rgb(59, 38, 76), black) ;
+  padding: 20px 25%;
+  display: flex;
+  font-family: "Share Tech";
+  font-size: 20px;
+
+}
+footer div
+{
+  width: 100%;
+}
+footer div:nth-child(1)
+{
+  border-right: 1px solid rgb(83, 204, 195);
+}
+footer div:nth-child(2)
+{
+  border-left: 1px solid rgb(83, 204, 195);
+}
+.contacto ul
+{
+  padding: 0;
+  margin:0;
+  padding: 10px;
+  margin: 10px;
+}
+.contacto a
+{
+  text-decoration: none;
+  color: rgb(83, 204, 195);
+  /* font-family: "Share Tech";
+  font-size: 20px; */
+}
+footer button
+{
+  background: none;
+  border: 0;
+  font-family: "Share Tech";
+  font-size: 15px;
+  color: rgb(83, 204, 195);
+  text-decoration: underline;
+  cursor: pointer;
+}
+footer button:hover
+{
+  color: yellow;
+}
+.servicios
+{
+  display: flex;
+  background: white;
+  padding: 50px;
+  font-family: "Montserrat";
+}
+.servicios .escuelas, .personas
+{
+  width: 50%;
+  text-align: center;
+  background: #fafafa;
+  margin: 10px;
+  padding: 25px;
+}
+.servicios img
+{
+  width: 25vw;
+}
+.conth
+{
+  height: 180px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.servicios ul
+{
+  text-align: left;
+}
+.servicios button
+{
+  background: linear-gradient(to left, rgb(83, 204, 195),  rgba(157, 99, 201) );
+  border:0;
+  font-family: "Montserrat";
+  color: black;
+  padding: 10px;
+  width: 50%;
+  border-radius: 5px;
+  box-shadow: 5px 6px 18px -3px;
+  cursor: pointer;
+}
+.servicios button h1
+{
+  color: white;
+  margin: 0;
 }
