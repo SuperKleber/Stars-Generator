@@ -92,7 +92,7 @@
         width: 100%;
         height: 100%;
       }
-      .about_design button{
+      .abrir{
         border: none;
         background: none;
         font-family: "Montserrat";
@@ -129,7 +129,7 @@
         </h3>
       </div>
       <div class="about_design">
-        <button onclick="leer()"> ¿Qué es el Design Sprint?</button>
+        <button class="abrir" onclick="leer_about()"> ¿Qué es el Design Sprint?</button>
         <div id="design_sprint" class="off">
           <p>
             <hr>
@@ -249,8 +249,13 @@
 
         </div>
       </div>
-      <div class="formulario">
-        <iframe id="formulario" src="https://docs.google.com/forms/d/e/1FAIpQLSdIr_WRjNzAzbHR719ws3EqEPc8OdgCqlsUNOL26y8lYbvEMg/viewform?embedded=true"  frameborder="0" marginheight="0" marginwidth="0">Cargando...</iframe>
+      <div>
+        <button class="abrir" onclick="leer_form()"> ¡REGÍSTRATE AQUÍ!</button>
+        <h4>Si ya te registraste ignora este botón</h4>
+        <div id="form" class="off formulario">
+          <iframe id="formulario" src="https://docs.google.com/forms/d/e/1FAIpQLSdIr_WRjNzAzbHR719ws3EqEPc8OdgCqlsUNOL26y8lYbvEMg/viewform?embedded=true"  frameborder="0" marginheight="0" marginwidth="0">Cargando...</iframe>
+        </div>
+        <a href="./politicas_de_privacidad.html"> <h6>Políticas de privacidad</h6></a>
       </div>
     </div>
     <!-- <span class="fondo"></span>
@@ -526,15 +531,24 @@
     </script>
     <script>
       const about = document.getElementById("design_sprint")
-      let abrir = true
-      const leer = () =>{
-        if (abrir){
+      const form = document.getElementById("form")
+      let abrir_about = true
+      const leer_about = () =>{
+        if (abrir_about){
           about.className= "on"
         } else{
           about.className= "off"
         }
-        
-        abrir = !abrir
+        abrir_about = !abrir_about
+      }
+      let abrir_form = true
+      const leer_form = () =>{
+        if (abrir_form){
+          form.className= "on formulario"
+        } else{
+          form.className= "off formulario"
+        }
+        abrir_form = !abrir_form
       }
 
     </script>
