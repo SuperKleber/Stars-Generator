@@ -92,6 +92,32 @@
         width: 100%;
         height: 100%;
       }
+      .about_design button{
+        border: none;
+        background: none;
+        font-family: "Montserrat";
+        padding: 9px;
+        border-radius: 5px;
+        box-shadow: 2px 2px 12px 1px black;
+        outline: none;
+        cursor: pointer;
+      }
+      .about_design h3{
+        text-align: start;
+      }
+      footer{
+        padding: 25px;
+
+      }
+      footer .contacto{
+        border-right: 0 !important;
+      }
+      .off{
+        display: none;
+      }
+      .on{
+        display: block;
+      }
     </style>
   </head>
   <body>
@@ -101,6 +127,92 @@
         <h3>En este WorkShop aprenderás el método DesignSprint creado por Google Ventures
           Para lograr construir proyectos de la manera más óptima posible
         </h3>
+      </div>
+      <div class="about_design">
+        <button onclick="leer()"> ¿Qué es el Design Sprint?</button>
+        <div id="design_sprint" class="off">
+          <p>
+            <hr>
+            <h2>
+              El Design Sprint es un método de trabajo
+              que dura 5 días de intenso trabajo, con un equipo de 7 personas y poco dinero en inversión.
+            </h2>
+            <hr>
+            <h3>
+              El método sigue una serie de pasos de manera muy detallada, los cuales tienen el objetivo
+              de probar la idea de un proyecto.
+            </h3>
+            <hr>
+            <h2>
+              El design sprint nace de la necesidad a un trabajo más rápido y efectivo.
+            </h2>
+            <hr>
+            <h3>
+              Las empresas y personas
+              "improvisan" en cualquier proyecto que se quiera realizar, es normal, 
+              nadie nos enseña a realizar un evento artístico o realizar un robot 
+              que atienda los huéspedes en los hoteles o a empezar un restaurante, 
+              el design sprint es un método muy efectivo y versátil, se adapta a cualquier proyecto,
+              es decir, tus días de improvisar acabaron. 
+              <br> 
+              Algo muy común son las actividades como "la lluvia de ideas", algo que si
+              se hace bien puede resultar muy divertida y da la sensación de ser
+              una dinámica "productiva", pero los emprendedores experimentados,
+              saben muy bien que la mayoría de las "maravillosas ideas", en 
+              el mundo real no funcionan, y lo peor que le puede pasar a alguien
+              es enamorarse de una idea, trabajar meses o hasta años en esa idea, invertir
+              muchísimo tiempo y dinero, todo para que al final termine en frustración
+              porque los resultados no fueron los esperados.
+              El Design Sprint te salva de ese "enamoramiento" y esa frustración, 
+              ya que son sólo 5 días para probar esa idea, el último día logras 
+              tener un prototipo que puedas probar en el mundo real (con clientes reales),
+              y de esa manera saber si el proyecto funcionará o no, sabrás los cambios
+              que tendrás que hacer para que funcione, y si tu producto 
+              ya funciona, sabrás cómo mejorarlo y aumentarle valor
+            </h3>
+            <hr>
+            <h2>
+              El Design Sprint tiene cientos de casos de éxito en todo el mundo
+            </h2>
+            <hr>
+            <h3>
+              Se podría escribir un libro grueso con todos lo ejemplos de éxito,
+              pero basta con saber que el Design Sprint sirve para 3 situaciones:
+              Empezar un proyecto, retomar un proyecto estancado, mejorar un proyecto.
+              un ejemplo de empezar un proyecto puede ser "Savioke",
+              que quizo construír un Robot que fuera capaz de antender a los huéspedes de un hotel
+              surgieron muchas preocupaciones, entre ellas era que las personas 
+              no entendieran cómo funciona el robot, y otra era que quizá los robots
+              podrían ser algo intimidante (imáginate que alguien toca la puerta
+              de tu habitación y aparece un robot), ellos hicieron el Design Sprint y
+              gracias a ello lograron resolver sus preocupaciones y además descubrir 
+              problemas que no se habían imaginado, todo fue exitoso.
+              Un ejemplo de mejorar un proyecto es "Slack", Slack es una plataforma online 
+              que utilizan las empresas para gestionar el trabajo en equipo,
+              pero tenían un problema, las personas no entendían, cómo funcionaba la plataforma
+              de manera intuitiva, muchas personas tenían que tomar cursos de Slack para 
+              entender su funcionamiento, entonces hicieron un Design Sprint, y surgió 2 ideas 
+              la primera era realizar una inteligencia artificial que 
+              chatee con los usuarios y los guíe en la plataforma, la otra idea era 
+              simplemente unos indicativos en mensajes de alerta de cada función de Slack,
+              ¿la primera idea suena buenísima verdad? pues no funcionó, y lo descubrieron en 5 días,
+              gracias al design sprint se tuvieron que ahorrar los meses de trabajo 
+              realizando una inteligencia artificial 100% funcional y luego encontrarse con 
+              el problema de que los usuarios se confunden más con el bot, ahora Slack tiene una interfaz mucho más intuitiva.
+              <br>
+              Ejemplos hay muchos, y el Design Sprint se adapta a todo tipo de proyectos:
+              restaurantes, empresas turísticas, empresas médicas, etc. 
+              Además puedes usar "partecitas" del Design Sprint para agilizar cualquier actividad en tu vida,
+              desde la administración de la empresa (todos estamos hartos de las reuniones innecesarias y largas) hasta 
+              hacer la tesis de tu licenciatura. 
+            </h3>
+            <hr>
+            <h2>
+              Quizá te estés preguntando ¿Cómo es posible hacer tanto en sólo 5 días?
+              Si quieres saberlo Regístrate, puedes hacerlo bajando esta página, saludos :)
+            </h2>
+          </p>
+        </div>
       </div>
       <div class="informacionWorkshop">
         <ul>
@@ -411,6 +523,20 @@
         )
         txt[0].innerHTML=' <ol  style="list-style:none; padding:0" > <h2 class="icon-heart"> Extras </h2> <li class="icon-star-half"> Certificados </li> <li class="icon-star-half"> Asesoriamente del mercado Laboral </li> <li class="icon-star-half"> Oportunidades a eventos y concursos </li> </ol >'
       })
+    </script>
+    <script>
+      const about = document.getElementById("design_sprint")
+      let abrir = false
+      const leer = () =>{
+        if (abrir){
+          about.className= "on"
+        } else{
+          about.className= "off"
+        }
+        
+        abrir = !abrir
+      }
+
     </script>
   </body>
 </html>
